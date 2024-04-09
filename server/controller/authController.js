@@ -124,7 +124,7 @@ exports.authRegisterController = async (req, res) => {
   }
 };
 
-// TEst user authenticated or not
+// Test user authenticated or not
 exports.testController = (req, res) => {
   res.send("Hello protected");
 };
