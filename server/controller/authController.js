@@ -46,7 +46,7 @@ exports.authRegisterController = async (req, res) => {
     const hashedPassword = await hashPassword(password);
 
     // Send Email to User
-    const transporter = await nodemailer.createTransport({
+    const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
         user: process.env.NODEMAILER_GMAIL,
@@ -69,7 +69,7 @@ exports.authRegisterController = async (req, res) => {
       }
     };
 
-    await sendMail(transporter, mailOptions);
+    sendMail(transporter, mailOptions);
 
     // Save user Image
     const uploadImage = await cloudinary.uploader.upload(

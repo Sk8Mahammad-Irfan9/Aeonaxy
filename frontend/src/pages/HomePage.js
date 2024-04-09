@@ -16,7 +16,6 @@ function classNames(...classes) {
 }
 const HomePage = () => {
   const [uploadedImage, setUploadImage] = useState("");
-  // console.log(auth);
   return (
     <>
       <Disclosure as="nav" className="bg-gray-800">
