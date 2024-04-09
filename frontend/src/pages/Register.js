@@ -38,7 +38,7 @@ const Register = () => {
     e.preventDefault();
     try {
       const result = await axios.post(
-        "http://localhost:3000/api/auth/register",
+        "https://aeonaxy-frontend.vercel.app/api/auth/register",
         {
           image: image,
           name,
