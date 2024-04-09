@@ -9,7 +9,7 @@ export default function PrivateRoute() {
 
   useEffect(() => {
     const authCheck = async () => {
-      const res = await axios.get("https://aeonaxy-frontend.vercel.app/api/auth/user-auth");
+      const res = await axios.get("https://aeonaxy-api.vercel.app/api/auth/user-auth");
       if (res.data.ok) {
         setOk(true);
       } else {
